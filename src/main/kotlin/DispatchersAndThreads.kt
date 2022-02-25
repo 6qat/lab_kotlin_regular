@@ -4,6 +4,7 @@ import kotlinx.coroutines.*
 
 
 fun main(): Unit = runBlocking {
+//    System.setProperty("kotlinx.coroutines.debug", "on" )
     launch {
         // context of the parent, main runBlocking coroutine
         println("main runBlocking      : I'm working in thread ${Thread.currentThread().name}, $coroutineContext")
