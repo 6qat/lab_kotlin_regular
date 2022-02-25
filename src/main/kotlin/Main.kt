@@ -19,6 +19,7 @@ fun main(): Unit = runBlocking {
                 print("$i")
             }
         }
+        //f<CoroutineScope>()
         f()
         g()
         doNewWorld()
@@ -50,6 +51,8 @@ private suspend fun doDoubleWorld() = coroutineScope {
     }
 
 }
+
+
 
 fun <Ctx> Ctx.f()
         where Ctx : CoroutineScope {
