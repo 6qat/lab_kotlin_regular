@@ -49,7 +49,6 @@ private suspend fun doDoubleWorld() = coroutineScope {
         info("World1", coroutineContext)
     }
 
-
 }
 
 fun <Ctx> Ctx.f()
