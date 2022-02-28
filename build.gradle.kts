@@ -13,9 +13,9 @@ repositories {
 }
 
 dependencies {
-    testImplementation(kotlin("test"))
+    testImplementation("org.jetbrains.kotlin:kotlin-test:1.6.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0")
-    implementation(kotlin("script-runtime"))
+    implementation("org.jetbrains.kotlin:kotlin-script-runtime:1.6.0")
 }
 
 tasks.test {
