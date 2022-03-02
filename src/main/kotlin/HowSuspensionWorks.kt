@@ -1,4 +1,5 @@
 import kotlinx.coroutines.CancellableContinuation
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.suspendCancellableCoroutine
 import java.util.concurrent.Executors
@@ -7,7 +8,7 @@ import kotlin.concurrent.thread
 import kotlin.coroutines.resume
 
 // https://kt.academy/article/cc-suspension
-fun main() = f4()
+fun main() = f1()
 
 fun f1() = runBlocking {
     println("Before")
@@ -15,9 +16,9 @@ fun f1() = runBlocking {
         println("Before too")
 //        it.resume(Unit)
         it.resumeWith(Result.success(Unit))
-        println("$coroutineContext")
+        println("$coroutineContext, Thread name: ${Thread.currentThread().name}")
     }
-    println("After")
+    println("After, $coroutineContext, , Thread name: ${Thread.currentThread().name}")
 }
 
 fun f2() = runBlocking {
